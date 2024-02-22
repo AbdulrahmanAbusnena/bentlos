@@ -9,8 +9,8 @@ ThemeData darkMode = ThemeData(
 final buttonTheme = ElevatedButton.styleFrom(
   minimumSize: const Size(250, 40),
   elevation: 0.0,
-  backgroundColor: const Color.fromARGB(255, 222, 214, 214),
-  foregroundColor: Colors.blueGrey,
+  backgroundColor: Colors.white,
+  foregroundColor: Colors.black,
 );
 
 final buttonTheme2 = TextButton.styleFrom(
