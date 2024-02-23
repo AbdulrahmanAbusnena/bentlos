@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.w800,
               ),
             ),
+            centerTitle: true,
             backgroundColor: Colors.yellow[400],
             elevation: 0.0,
           ),

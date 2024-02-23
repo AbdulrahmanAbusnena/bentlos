@@ -16,14 +16,14 @@ class EApp extends ChangeNotifier {
         price: '£5460'),
     Products(
         name: 'Iphone 15 pro max',
-        description: 'Iphone 15 pro max silver ',
+        description: 'Iphone 15 pro max white ',
         imagepath: 'imagepath',
-        price: '£24.5'),
+        price: '£1099.99'),
     Products(
-        name: 'Adidas Boxer',
-        description: 'Addidas boxer for males',
+        name: 'Stickers',
+        description: 'Anime Stickers',
         imagepath: 'imagepath',
-        price: '£24.5'),
+        price: '£2'),
   ];
   // get cart
   final List<Products> _usercart = [];

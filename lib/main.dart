@@ -1,4 +1,4 @@
-import 'package:bentlos/Pages/homepage.dart';
+import 'package:bentlos/Pages/registrationview.dart';
 import 'package:bentlos/modules/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +19,7 @@ class Main extends StatelessWidget {
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Bentlos',
-            home: HomePage(),
+            home: RegistrationView(),
           );
         });
   }

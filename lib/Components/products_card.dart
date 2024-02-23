@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 
 class CardHome extends StatefulWidget {
-  const CardHome({super.key, required this.products});
+  const CardHome({
+    super.key,
+    required this.products,
+  });
   final Products products;
 
   @override
@@ -12,20 +15,19 @@ class CardHome extends StatefulWidget {
 class CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 250,
-      height: 210,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [
-            BoxShadow(
-                color: Colors.grey,
-                spreadRadius: 10,
-                blurRadius: 3,
-                offset: Offset(0, 3)),
-          ]),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 9),
+    return Card(
+      elevation: 50,
+      shadowColor: Colors.grey,
+      color: Colors.white60,
+      child: SizedBox(
+        height: 100,
+        width: 200,
+        child: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            children: [],
+          ),
+        ),
       ),
     );
   }
