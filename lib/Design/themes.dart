@@ -9,7 +9,7 @@ ThemeData darkMode = ThemeData(
 final buttonTheme = ElevatedButton.styleFrom(
   minimumSize: const Size(250, 40),
   elevation: 0.0,
-  backgroundColor: Colors.white,
+  backgroundColor: const Color.fromARGB(255, 97, 95, 95),
   foregroundColor: Colors.black,
 );
 
@@ -26,7 +26,7 @@ final buttonTheme3 = ElevatedButton.styleFrom(
   ),
   elevation: 0.0,
   foregroundColor: Colors.white70,
-  backgroundColor: Colors.brown,
+  backgroundColor: const Color.fromARGB(255, 97, 95, 95),
 );
 
 final buttonTheme4 = ElevatedButton.styleFrom(
@@ -36,5 +36,12 @@ final buttonTheme4 = ElevatedButton.styleFrom(
   ),
   elevation: 0.0,
   foregroundColor: Colors.white70,
-  backgroundColor: Colors.brown[300],
+  backgroundColor: const Color.fromARGB(255, 97, 95, 95),
+);
+
+final bigbuttontheme = ElevatedButton.styleFrom(
+  minimumSize: const Size(200, 100),
+  elevation: 0,
+  foregroundColor: Colors.white70,
+  backgroundColor: const Color.fromARGB(255, 97, 95, 95),
 );

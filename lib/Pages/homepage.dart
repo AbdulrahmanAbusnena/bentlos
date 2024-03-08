@@ -15,31 +15,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-          backgroundColor: Colors.yellow[400],
-          appBar: AppBar(
-            title: Text(
-              'Home',
-              style: GoogleFonts.montserrat(
-                color: Colors.white54,
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
-              ),
+        backgroundColor: Colors.black45,
+        appBar: AppBar(
+          title: Text(
+            'Home',
+            style: GoogleFonts.montserrat(
+              color: Colors.white54,
+              fontSize: 24,
+              fontWeight: FontWeight.w800,
             ),
-            centerTitle: true,
-            backgroundColor: Colors.yellow[400],
-            elevation: 0.0,
           ),
-          body: Column(
-            children: [
-              Row(
-                children: [
-                  GridView.count(
-                    crossAxisCount: 2,
-                  )
-                ],
-              ),
-            ],
-          )),
+          centerTitle: true,
+          backgroundColor: Colors.black45,
+          elevation: 0.0,
+        ),
+        body: Column(),
+      ),
     );
   }
 }

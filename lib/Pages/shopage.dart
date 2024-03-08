@@ -1,5 +1,8 @@
+import 'package:bentlos/Components/products_card.dart';
+import 'package:bentlos/Pages/orderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/shop.dart';
+import 'package:bentlos/modules/product.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +14,17 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  getOrder(Products products) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => OrderPage(
+          products: products,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<EApp>(
@@ -30,8 +44,18 @@ class _ShopPageState extends State<ShopPage> {
           ),
           body: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: [],
+            child: Row(
+              children: [
+                ListView.builder(
+                    itemCount: value.shop.length,
+                    itemBuilder: (context, index) {
+                      Products individualProducts = value.shop[index];
+                      return CardHome(
+                        products: individualProducts,
+                        onTap: () => getOrder(individualProducts),
+                      );
+                    }),
+              ],
             ),
           )),
     );
