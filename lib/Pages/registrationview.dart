@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Design/themes.dart';
 import 'package:bentlos/Pages/homepage.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:bentlos/Components/navswticher.dart';
 
 class RegistrationView extends StatefulWidget {
   const RegistrationView({super.key});
@@ -44,7 +45,7 @@ class _RegistrationViewState extends State<RegistrationView> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomePage(),
+                      builder: (context) => const NavSwitch(),
                     ),
                   );
                 },
@@ -69,7 +70,7 @@ class _RegistrationViewState extends State<RegistrationView> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                          builder: (context) => const NavSwitch()));
                 },
                 child: const Text(
                   'Enter',

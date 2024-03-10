@@ -12,11 +12,11 @@ class NavSwitch extends StatefulWidget {
 }
 
 class _NavSwitchState extends State<NavSwitch> {
-  int _selected_index = 0;
+  int _selectedIndex = 0;
   void navigateBottomBar(int newindex) {
     setState(
       () {
-        _selected_index = newindex;
+        _selectedIndex = newindex;
       },
     );
   }
@@ -33,7 +33,7 @@ class _NavSwitchState extends State<NavSwitch> {
       bottomNavigationBar: NavBar(
         onTabChange: (index) => navigateBottomBar(index),
       ),
-      body: _pages[_selected_index],
+      body: _pages[_selectedIndex],
     );
   }
 }
