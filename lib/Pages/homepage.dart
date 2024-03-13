@@ -15,12 +15,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: Colors.black45,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text(
             'Home',
             style: GoogleFonts.montserrat(
-              color: Colors.white54,
+              color: Colors.black,
               fontSize: 24,
               fontWeight: FontWeight.w800,
             ),
