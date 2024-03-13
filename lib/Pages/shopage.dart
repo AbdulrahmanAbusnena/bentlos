@@ -28,36 +28,36 @@ class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     return Consumer<EApp>(
-      builder: (context, value, child) => Scaffold(
-          backgroundColor: Colors.black,
-          appBar: AppBar(
-            title: Text(
-              'Shop',
-              style: GoogleFonts.montserrat(
-                color: Colors.white54,
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
+        builder: (context, value, child) => Scaffold(
+              backgroundColor: Colors.black,
+              appBar: AppBar(
+                title: Text(
+                  'Shop',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white54,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                backgroundColor: Colors.black,
+                elevation: 0.0,
               ),
-            ),
-            backgroundColor: Colors.black,
-            elevation: 0.0,
-          ),
-          body: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                ListView.builder(
-                    itemCount: value.shop.length,
-                    itemBuilder: (context, index) {
-                      Products individualProducts = value.shop[index];
-                      return CardHome(
-                        products: individualProducts,
-                        onTap: () => getOrder(individualProducts),
-                      );
-                    }),
-              ],
-            ),
-          )),
-    );
+              body: Column(
+                children: [
+                  Expanded(
+                    child: ListView.builder(
+                        itemCount: value.shop.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          Products individualProducts = value.shop[index];
+                          return CardHome(
+                            products: individualProducts,
+                            onTap: () => getOrder(individualProducts),
+                          );
+                        }),
+                  ),
+                ],
+              ),
+            ));
   }
 }

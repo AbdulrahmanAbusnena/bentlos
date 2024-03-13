@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 
-class Listile extends StatefulWidget {
-  Products products;
-  Listile({super.key, required this.products});
+class Listile extends StatelessWidget {
+  final Products products;
+  final void Function()? onTap;
+  const Listile({super.key, required this.products, required this.onTap});
 
-  @override
-  State<Listile> createState() => _ListileState();
-}
-
-class _ListileState extends State<Listile> {
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(widget.products.name),
-      leading: Image.asset(widget.products.imagepath),
-      trailing: Icon(Icons.arrow_forward_ios),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.grey,
+        ),
+        child: ListTile(
+          title: Text(products.name),
+          leading: Image.asset(products.imagepath),
+          trailing: const Icon(Icons.arrow_forward_ios),
+        ),
+      ),
     ); // Products Name
   }
 }
