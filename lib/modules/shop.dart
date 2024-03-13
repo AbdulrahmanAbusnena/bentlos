@@ -4,24 +4,24 @@ import 'package:flutter/material.dart';
 class EApp extends ChangeNotifier {
   final List<Products> _shop = [
     Products(
-        name: 'Adidas Jacket',
-        description: 'Addidas Jacket for males',
-        imagepath: 'assets/jacket.jpg',
+        name: 'Jacket',
+        description: 'Jacket for males',
+        imagepath: 'assets/jacket.png',
         price: '£24.5'),
     Products(
         name: 'Luis Vuiton Bag',
         description: 'Luis Vuiton Bag',
-        imagepath: 'assets/backpack.jpg',
+        imagepath: 'assets/backpack.png',
         price: '£5460'),
     Products(
         name: 'Iphone 15 pro max',
         description: 'Iphone 15 pro max white ',
-        imagepath: 'assets/iphone.jpg',
+        imagepath: 'assets/iphone.png',
         price: '£1099.99'),
     Products(
         name: 'Stickers',
         description: 'Anime Stickers',
-        imagepath: 'assets/sticker1.jpg',
+        imagepath: 'assets/sticker.jpg',
         price: '£2'),
   ];
   // get cart
