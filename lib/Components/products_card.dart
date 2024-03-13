@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 
-// ignore: must_be_immutable
 class CardHome extends StatefulWidget {
-  CardHome({
+  const CardHome({
     super.key,
     required this.products,
     required this.onTap,
   });
 
   final Products products;
-  void Function()? onTap;
+  final void Function()? onTap;
 
   @override
   State<CardHome> createState() => _CardHomeState();

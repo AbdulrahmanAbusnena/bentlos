@@ -3,8 +3,8 @@ import 'package:bentlos/Design/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BigButton extends StatefulWidget {
-  void Function()? onPressed;
-  BigButton({super.key, required this.onPressed});
+  final void Function()? onPressed;
+  const BigButton({super.key, required this.onPressed});
 
   @override
   State<BigButton> createState() => BigButtonState();
