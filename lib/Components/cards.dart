@@ -29,7 +29,7 @@ class _CardHomeState extends State<CardHome> {
           height: 100,
           width: 200,
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
                 Center(
@@ -37,7 +37,7 @@ class _CardHomeState extends State<CardHome> {
                     backgroundImage: AssetImage(widget.products.imagepath),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Row(children: [

@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: Color.fromARGB(255, 15, 33, 49),
+        backgroundColor: const Color.fromARGB(255, 15, 33, 49),
         appBar: AppBar(
           title: Text(
             'Home',

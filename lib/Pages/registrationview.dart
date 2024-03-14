@@ -52,7 +52,7 @@ class _RegistrationViewState extends State<RegistrationView> {
                 child: Animate(
                   effects: [
                     FadeEffect(duration: 1000.ms),
-                    ShakeEffect(hz: 100),
+                    const ShakeEffect(hz: 100),
                   ],
                   child: Image.asset(
                     'assets/store.png',
