@@ -1,5 +1,5 @@
 import 'package:bentlos/Components/listile.dart';
-import 'package:bentlos/Components/products_card.dart';
+import 'package:bentlos/Components/cards.dart';
 import 'package:bentlos/modules/product.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/shop.dart';
@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 15, 33, 49),
         appBar: AppBar(
           title: Text(
             'Home',

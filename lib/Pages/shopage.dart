@@ -1,4 +1,4 @@
-import 'package:bentlos/Components/products_card.dart';
+import 'package:bentlos/Components/cards.dart';
 import 'package:bentlos/Pages/orderpage.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/shop.dart';
