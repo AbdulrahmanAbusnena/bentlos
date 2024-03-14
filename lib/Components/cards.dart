@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
+import 'package:bentlos/Design/colors.dart';
 
 class CardHome extends StatefulWidget {
   const CardHome({
@@ -21,9 +22,9 @@ class _CardHomeState extends State<CardHome> {
     return GestureDetector(
       onTap: widget.onTap,
       child: Card(
-        elevation: 50,
+        //   elevation: 50,
         shadowColor: Colors.grey,
-        color: Colors.white60,
+        color: buttons_card_color,
         child: SizedBox(
           height: 100,
           width: 200,
