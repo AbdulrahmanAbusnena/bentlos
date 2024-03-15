@@ -6,7 +6,6 @@ import 'package:bentlos/modules/shop.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'orderpage.dart';
-import 'package:bentlos/Design/colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -67,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     Products individualProducts = value.shop[index];
                     return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Listile(
                         products: individualProducts,
                         onTap: () => getOrder(individualProducts),
