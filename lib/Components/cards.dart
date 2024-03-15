@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 import 'package:bentlos/Design/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CardHome extends StatefulWidget {
   const CardHome({
@@ -32,23 +33,37 @@ class _CardHomeState extends State<CardHome> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                Center(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(widget.products.imagepath),
-                  ),
+                CircleAvatar(
+                  backgroundImage: AssetImage(widget.products.imagepath),
                 ),
+
                 const SizedBox(
                   height: 50,
                 ),
                 Row(children: [
-                  Text(widget.products.name), // title
+                  Text(widget.products.name,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: text_color,
+                      )), // title
                   const SizedBox(width: 20),
-                  Text(widget.products.price), // Price
+                  Text(widget.products.price,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: text_color,
+                      )), // title ), // Price
                 ]),
                 const SizedBox(
                   height: 25,
                 ),
-                Text(widget.products.description), // description
+                Text(widget.products.description,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: text_color,
+                    )), // title,), // description
               ],
             ),
           ),

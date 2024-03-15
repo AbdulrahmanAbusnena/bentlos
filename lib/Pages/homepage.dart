@@ -6,7 +6,7 @@ import 'package:bentlos/modules/shop.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'orderpage.dart';
-import 'package:bentlos/design/colors.dart';
+import 'package:bentlos/Design/colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
