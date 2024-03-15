@@ -6,6 +6,7 @@ import 'package:bentlos/modules/shop.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'orderpage.dart';
+import 'package:bentlos/design/colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -32,18 +33,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: const Color.fromARGB(255, 15, 33, 49),
+        backgroundColor: background_color,
         appBar: AppBar(
           title: Text(
             'Home',
             style: GoogleFonts.montserrat(
-              color: Colors.black,
+              color: text_color,
               fontSize: 24,
               fontWeight: FontWeight.w800,
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.black45,
+          backgroundColor: background_color,
           elevation: 0.0,
         ),
         body: Column(
