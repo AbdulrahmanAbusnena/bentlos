@@ -13,7 +13,9 @@ class Listile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: buttons_card_color),
+          color: buttons_card_color,
+          borderRadius: BorderRadius.circular(10),
+        ),
         child: ListTile(
           title: Text(products.name),
           leading: Image.asset(products.imagepath),
