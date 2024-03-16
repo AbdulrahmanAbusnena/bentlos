@@ -20,10 +20,12 @@ class CardHome extends StatefulWidget {
 class _CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
+    // Gesture Dector to the direct to the orderpage
     return GestureDetector(
       onTap: widget.onTap,
+      // The Card
       child: Card(
-        //   elevation: 50,
+        elevation: 50,
         shadowColor: Colors.grey,
         color: buttons_card_color,
         child: SizedBox(
@@ -35,24 +37,29 @@ class _CardHomeState extends State<CardHome> {
               children: [
                 CircleAvatar(
                   backgroundImage: AssetImage(widget.products.imagepath),
+                  radius: 50,
                 ),
 
                 const SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
                 Row(children: [
-                  Text(widget.products.name,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                      )), // title
-                  const SizedBox(width: 20),
+                  Text(
+                    widget.products.name,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+
+                  const SizedBox(width: 30),
                   Text(widget.products.price,
                       style: GoogleFonts.montserrat(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
-                        color: text_color,
+                        color: Colors.white,
                       )), // title ), // Price
                 ]),
                 const SizedBox(
