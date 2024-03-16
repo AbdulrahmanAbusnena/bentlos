@@ -43,7 +43,7 @@ class _CardHomeState extends State<CardHome> {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(children: [
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     widget.products.name,
                     style: GoogleFonts.montserrat(
@@ -54,10 +54,10 @@ class _CardHomeState extends State<CardHome> {
                     textAlign: TextAlign.start,
                   ),
 
-                  const SizedBox(width: 30),
+                  const SizedBox(width: 50),
                   Text(widget.products.price,
                       style: GoogleFonts.montserrat(
-                        fontSize: 13,
+                        fontSize: 12,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       )), // title ), // Price
