@@ -9,7 +9,7 @@ class EApp extends ChangeNotifier {
         imagepath: 'assets/jacket.png',
         price: '£24.5'),
     Products(
-        name: 'Luis Vuiton Bag',
+        name: 'LVs Bag',
         description: 'Luis Vuiton Bag',
         imagepath: 'assets/backpack.png',
         price: '£5460'),
@@ -22,7 +22,7 @@ class EApp extends ChangeNotifier {
         name: 'Stickers',
         description: 'Anime Stickers',
         imagepath: 'assets/sticker.jpg',
-        price: '£2'),
+        price: '£2.0'),
   ];
   // get cart
   final List<Products> _usercart = [];

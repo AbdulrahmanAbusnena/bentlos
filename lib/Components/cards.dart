@@ -39,38 +39,40 @@ class _CardHomeState extends State<CardHome> {
                   backgroundImage: AssetImage(widget.products.imagepath),
                   radius: 50,
                 ),
-
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Text(
                     widget.products.name,
                     style: GoogleFonts.montserrat(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.start,
                   ),
 
-                  const SizedBox(width: 50),
+                  const Spacer(
+                    flex: 15,
+                  ),
                   Text(widget.products.price,
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w300,
                         color: Colors.white,
                       )), // title ), // Price
                 ]),
                 const SizedBox(
                   height: 25,
                 ),
-                Text(widget.products.description,
+                /*   Text(widget.products.description,
                     style: GoogleFonts.montserrat(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
                       color: text_color,
                     )), // title,), // description
+                    */
               ],
             ),
           ),
