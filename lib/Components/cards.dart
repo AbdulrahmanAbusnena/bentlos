@@ -45,7 +45,7 @@ class _CardHomeState extends State<CardHome> {
                       style: GoogleFonts.montserrat(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        color: text_color,
+                        color: Colors.white,
                       )), // title
                   const SizedBox(width: 20),
                   Text(widget.products.price,
