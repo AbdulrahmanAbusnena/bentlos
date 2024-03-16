@@ -28,10 +28,12 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 5, 37, 64),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
+            backgroundColor: const Color.fromARGB(255, 5, 37, 64),
             floating: true,
             expandedHeight: 160.0,
             flexibleSpace: FlexibleSpaceBar(
