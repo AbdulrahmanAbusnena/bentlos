@@ -58,7 +58,7 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                   Row(
                     children: [
-                      Text(widget.products.price),
+                      Text(widget.products.price), // product's price
                       const Spacer(), // spacer used for spacing the widgets currectly
                       BigButton(onPressed: addToCart), // add to cart button
                     ],
