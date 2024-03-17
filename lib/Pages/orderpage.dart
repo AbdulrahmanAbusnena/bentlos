@@ -2,11 +2,10 @@ import 'package:bentlos/Components/bigbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 import 'package:bentlos/modules/shop.dart';
-
-// import 'package:bentlos/modules/shop.dart';
 import 'package:provider/provider.dart';
 
 class OrderPage extends StatefulWidget {
+  // me defining the products
   final Products products;
   const OrderPage({super.key, required this.products});
 
@@ -15,6 +14,7 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
+  // This is the add to cart
   void addToCart() {
     Provider.of<EApp>(context, listen: false).addToCart(widget.products);
     Navigator.pop(context);
@@ -28,42 +28,39 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+      backgroundColor:
+          const Color.fromARGB(255, 5, 37, 64), // background color for the app
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
-            backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+            backgroundColor: const Color.fromARGB(
+                255, 5, 37, 64), // background color for the sliver app bar
             floating: true,
             expandedHeight: 160.0,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(widget.products.name),
-              background: Image.asset(widget.products.imagepath),
+              title: Text(widget.products.name), // Product's Title/Name
+              background:
+                  Image.asset(widget.products.imagepath), // Product's Image
             ),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) => Column(
                 children: [
-                  Row(
-                    children: [
-                      Text(widget.products.description), // products description
-                      //    SizedBox(width: 20,),
-                      //    Text(widget.products.price),  // products price
-                    ],
-                  ),
+                  Text(widget.products.name), // Product's Title/Name
                   const SizedBox(
                     height: 20,
+                  ),
+                  Text(widget.products.description), // product's description
+                  const SizedBox(
+                    height: 10,
                   ),
                   Row(
                     children: [
                       Text(widget.products.price),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      BigButton(
-                        onPressed: addToCart,
-                      ),
+                      const Spacer(), // spacer used for spacing the widgets currectly
+                      BigButton(onPressed: addToCart), // add to cart button
                     ],
                   ),
                 ],

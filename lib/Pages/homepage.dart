@@ -40,7 +40,8 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               fontSize: 24,
               fontWeight: FontWeight.w800,
-            ),
+            ), 
+            
           ),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 5, 37, 64),

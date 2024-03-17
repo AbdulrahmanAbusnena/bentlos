@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_animate: ^4.5.0
   google_nav_bar: ^5.0.6
+  lottie: ^3.1.0
 
 dev_dependencies:
   flutter_test:

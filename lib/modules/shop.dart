@@ -14,10 +14,10 @@ class EApp extends ChangeNotifier {
         imagepath: 'assets/backpack.png',
         price: '£5460'),
     Products(
-        name: 'Iphone 15 pro max',
+        name: 'Iphone 15 pm ',
         description: 'Iphone 15 pro max white ',
         imagepath: 'assets/iphone.png',
-        price: '£1099.99'),
+        price: '£1099'),
     Products(
         name: 'Stickers',
         description: 'Anime Stickers',
