@@ -11,8 +11,9 @@ class ListTileCart extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 11, 54, 90),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 11, 54, 90),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: ListTile(
           title: Text(products.name),

@@ -1,4 +1,3 @@
-import 'package:bentlos/Design/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 
@@ -13,7 +12,7 @@ class Listile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: buttons_card_color,
+          color: const Color.fromARGB(255, 11, 54, 90),
           borderRadius: BorderRadius.circular(10),
         ),
         child: ListTile(
