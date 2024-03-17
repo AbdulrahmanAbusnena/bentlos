@@ -46,9 +46,10 @@ class _OrderPageState extends State<OrderPage> {
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
+              childCount: 1,
               (context, index) => Column(
                 children: [
-                  Text(widget.products.name), // Product's Title/Name
+                  Text(widget.products.name), // .Product's Title/Name
                   const SizedBox(
                     height: 20,
                   ),
@@ -59,7 +60,10 @@ class _OrderPageState extends State<OrderPage> {
                   Row(
                     children: [
                       Text(widget.products.price), // product's price
-                      const Spacer(), // spacer used for spacing the widgets currectly
+                      //     const Spacer(), // spacer used for spacing the widgets currectly
+                      const SizedBox(
+                        height: 35,
+                      ),
                       BigButton(onPressed: addToCart), // add to cart button
                     ],
                   ),

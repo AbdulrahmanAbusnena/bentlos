@@ -5,7 +5,6 @@ class Listile extends StatelessWidget {
   final Products products;
   final void Function()? onTap;
   const Listile({super.key, required this.products, required this.onTap});
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
