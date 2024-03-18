@@ -21,7 +21,7 @@ class BigButtonState extends State<BigButton> {
         style: GoogleFonts.montserrat(
           fontSize: 15,
           fontWeight: FontWeight.w700,
-        ),
+        ), 
       ),
     );
   }
