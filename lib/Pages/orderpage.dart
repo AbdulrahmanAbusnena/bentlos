@@ -37,7 +37,7 @@ class _OrderPageState extends State<OrderPage> {
             backgroundColor: const Color.fromARGB(
                 255, 5, 37, 64), // background color for the sliver app bar
             floating: true,
-            expandedHeight: 160.0,
+            expandedHeight: 220.0,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(widget.products.name), // Product's Title/Name
               background:
@@ -51,19 +51,20 @@ class _OrderPageState extends State<OrderPage> {
                 children: [
                   Text(widget.products.name), // .Product's Title/Name
                   const SizedBox(
-                    height: 20,
+                    height: 50,
                   ),
                   Text(widget.products.description), // product's description
                   const SizedBox(
-                    height: 10,
+                    height: 270,
                   ),
                   Row(
                     children: [
-                      Text(widget.products.price), // product's price
-                      //     const Spacer(), // spacer used for spacing the widgets currectly
                       const SizedBox(
-                        height: 35,
+                        width: 10,
                       ),
+                      Text(widget.products.price), // product's price
+                      const Spacer(), // spacer used for spacing the widgets currectly
+
                       BigButton(onPressed: addToCart), // add to cart button
                     ],
                   ),

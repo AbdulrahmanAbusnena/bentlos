@@ -5,17 +5,31 @@ class EApp extends ChangeNotifier {
   final List<Products> _shop = [
     Products(
         name: 'Jacket',
-        description: 'Jacket for males',
+        description: '''
+        type: Jacket for Males  
+        Size: 15, 
+        Status: Available,  
+        122 Available 
+        ''',
         imagepath: 'assets/jacket.png',
         price: '£24.5'),
     Products(
         name: 'LVs Bag',
-        description: 'Luis Vuiton Bag',
+        description: ''' 
+        type: Luis Vuiton Bag  
+        Status: Available,  
+        2 Available 
+        ''',
         imagepath: 'assets/backpack.png',
         price: '£5460'),
     Products(
         name: 'Iphone 15 pm ',
-        description: 'Iphone 15 pro max white ',
+        description: ''' 
+        type: Iphone 15 pro Max 
+        Color: White, 
+        Status: Available,  
+        28 Available 
+        ''',
         imagepath: 'assets/iphone.png',
         price: '£1099'),
     Products(
