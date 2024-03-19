@@ -40,8 +40,10 @@ final buttonTheme4 = ElevatedButton.styleFrom(
 );
 
 final bigbuttontheme = ElevatedButton.styleFrom(
-  minimumSize: const Size(200, 100),
+  minimumSize: const Size(200, 50 + 25),
   elevation: 0,
   foregroundColor: Colors.white70,
   backgroundColor: const Color.fromARGB(255, 97, 95, 95),
+  shadowColor: Colors.grey,
+  // padding: const EdgeInsets.all(25.0),
 );

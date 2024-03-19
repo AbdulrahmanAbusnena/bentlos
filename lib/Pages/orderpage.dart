@@ -2,6 +2,7 @@ import 'package:bentlos/Components/bigbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 import 'package:bentlos/modules/shop.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class OrderPage extends StatefulWidget {
@@ -34,14 +35,23 @@ class _OrderPageState extends State<OrderPage> {
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
+
             backgroundColor: const Color.fromARGB(
                 255, 5, 37, 64), // background color for the sliver app bar
             floating: true,
-            expandedHeight: 220.0,
+            expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(widget.products.name), // Product's Title/Name
-              background:
-                  Image.asset(widget.products.imagepath), // Product's Image
+              title: Text(
+                widget.products.name,
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white54,
+                ),
+              ), // Product's Title/Name
+              centerTitle: true,
+              background: Image.asset(widget.products.imagepath,
+                  height: 55), // Product's Image
             ),
           ),
           SliverList(
@@ -55,7 +65,7 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                   Text(widget.products.description), // product's description
                   const SizedBox(
-                    height: 270,
+                    height: 100,
                   ),
                   Row(
                     children: [
