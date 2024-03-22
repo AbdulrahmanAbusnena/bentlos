@@ -45,7 +45,9 @@ final bigbuttontheme = ElevatedButton.styleFrom(
     25,
   ),
   elevation: 50,
-  shape: const OvalBorder(eccentricity: BorderSide.strokeAlignOutside),
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(10),
+  ),
   foregroundColor: Colors.white70,
   backgroundColor: const Color.fromARGB(255, 97, 95, 95),
   shadowColor: Colors.grey,
