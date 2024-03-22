@@ -35,7 +35,6 @@ class _OrderPageState extends State<OrderPage> {
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
-
             backgroundColor: const Color.fromARGB(
                 255, 5, 37, 64), // background color for the sliver app bar
             floating: true,
@@ -74,6 +73,10 @@ class _OrderPageState extends State<OrderPage> {
                       ),
                       Text(widget.products.price), // product's price
                       const Spacer(), // spacer used for spacing the widgets currectly
+                      const VerticalDivider(
+                        thickness: 10,
+                        width: 10,
+                      ),
 
                       BigButton(onPressed: addToCart), // add to cart button
                     ],

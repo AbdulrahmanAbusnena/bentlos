@@ -17,7 +17,7 @@ class BigButtonState extends State<BigButton> {
       style: bigbuttontheme,
       onPressed: widget.onPressed,
       child: Text(
-        'Buy',
+        'Add to Cart',
         style: GoogleFonts.montserrat(
           fontSize: 15,
           fontWeight: FontWeight.w700,
