@@ -35,11 +35,17 @@ class _OrderPageState extends State<OrderPage> {
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
+            stretch: true,
+
             backgroundColor: const Color.fromARGB(
                 255, 5, 37, 64), // background color for the sliver app bar
             floating: true,
             expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
+              stretchModes: const [
+                StretchMode.fadeTitle,
+                StretchMode.zoomBackground,
+              ],
               title: Text(
                 widget.products.name,
                 style: GoogleFonts.montserrat(
