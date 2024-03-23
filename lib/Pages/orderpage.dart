@@ -66,20 +66,30 @@ class _OrderPageState extends State<OrderPage> {
                   const SizedBox(
                     height: 100,
                   ),
-                  Row(
-                    children: [
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(widget.products.price), // product's price
-                      const Spacer(), // spacer used for spacing the widgets currectly
-                      const VerticalDivider(
-                        thickness: 10,
-                        width: 10,
-                      ),
+                  IntrinsicHeight(
+                    child: Row(
+                      children: [
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Text(widget.products.price), // product's price
 
-                      BigButton(onPressed: addToCart), // add to cart button
-                    ],
+                        const Spacer(), // spacer used for spacing the widgets currectly
+                        const VerticalDivider(
+                          color: Colors.black,
+                          thickness: 1,
+                          indent: 5,
+                          endIndent: 0,
+                          width: 20,
+                        ),
+
+                        BigButton(onPressed: addToCart), // add to cart button
+                        const SizedBox(width: 10),
+                        const SizedBox(
+                          height: 10,
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),

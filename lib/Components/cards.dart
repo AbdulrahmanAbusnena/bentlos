@@ -26,7 +26,7 @@ class _CardHomeState extends State<CardHome> {
       // The Card
       child: Card(
         elevation: 50,
-        shadowColor: Colors.grey,
+        //   shadowColor: Colors.grey,
         color: buttons_card_color,
         child: SizedBox(
           height: 100,
@@ -46,7 +46,7 @@ class _CardHomeState extends State<CardHome> {
                   Text(
                     widget.products.name,
                     style: GoogleFonts.montserrat(
-                      fontSize: 13,    
+                      fontSize: 13,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),
