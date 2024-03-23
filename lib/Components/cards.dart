@@ -29,7 +29,7 @@ class _CardHomeState extends State<CardHome> {
         //   shadowColor: Colors.grey,
         color: buttons_card_color,
         child: SizedBox(
-          height: 100,
+          height: 80,
           width: 200,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
