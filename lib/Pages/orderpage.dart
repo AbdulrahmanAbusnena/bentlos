@@ -91,9 +91,6 @@ class _OrderPageState extends State<OrderPage> {
 
                         BigButton(onPressed: addToCart), // add to cart button
                         const SizedBox(width: 10),
-                        const SizedBox(
-                          height: 10,
-                        )
                       ],
                     ),
                   ),

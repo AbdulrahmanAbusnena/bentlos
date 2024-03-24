@@ -21,7 +21,7 @@ class _RegistrationViewState extends State<RegistrationView> {
         appBar: AppBar(
           backgroundColor: Colors.yellow[400],
           title: Text(
-            'Twister',
+            'Bentlos',
             style: GoogleFonts.montserrat(
               color: Colors.white54,
               fontSize: 23,
