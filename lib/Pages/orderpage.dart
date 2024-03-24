@@ -30,7 +30,7 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          const Color.fromARGB(255, 5, 37, 64), // background color for the app
+          const Color.fromARGB(255, 11, 54, 90), // background color for the app
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
@@ -42,10 +42,6 @@ class _OrderPageState extends State<OrderPage> {
             floating: true,
             expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
-              stretchModes: const [
-                StretchMode.fadeTitle,
-                StretchMode.zoomBackground,
-              ],
               title: Text(
                 widget.products.name,
                 style: GoogleFonts.montserrat(
@@ -55,8 +51,11 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ), // Product's Title/Name
               centerTitle: true,
-              background: Image.asset(widget.products.imagepath,
-                  height: 55), // Product's Image
+              background: Image.asset(
+                widget.products.imagepath,
+                height: 10,
+                //          width: 10,
+              ), // Product's Image
             ),
           ),
           SliverList(
@@ -70,7 +69,7 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                   Text(widget.products.description), // product's description
                   const SizedBox(
-                    height: 100,
+                    height: 200,
                   ),
                   IntrinsicHeight(
                     child: Row(
@@ -78,7 +77,13 @@ class _OrderPageState extends State<OrderPage> {
                         const SizedBox(
                           width: 50,
                         ),
-                        Text(widget.products.price), // product's price
+                        Text(
+                          widget.products.price,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 15,
+                            fontWeight: FontWeight.,
+                          ),
+                        ), // product's price
 
                         const Spacer(), // spacer used for spacing the widgets currectly
                         const VerticalDivider(
