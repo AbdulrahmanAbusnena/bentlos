@@ -29,41 +29,13 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          const Color.fromARGB(255, 11, 54, 90), // background color for the app
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            pinned: true,
-            stretch: true,
-
-            backgroundColor: const Color.fromARGB(
-                255, 5, 37, 64), // background color for the sliver app bar
-            floating: true,
-            expandedHeight: 300,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                widget.products.name,
-                style: GoogleFonts.montserrat(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white54,
-                ),
-              ), // Product's Title/Name
-              centerTitle: true,
-              background: Image.asset(
-                widget.products.imagepath,
-                height: 10,
-                //          width: 10,
-              ), // Product's Image
-            ),
-          ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              childCount: 1,
-              (context, index) => Column(
+      body: Container(
+        child: Column(
+          children: [
+            DraggableScrollableSheet(
+              builder: (context, scrollController) => Column(
                 children: [
-                  Text(widget.products.name), // .Product's Title/Name
+                  Text(widget.products.name), // Product's Title/Name
                   const SizedBox(
                     height: 50,
                   ),
@@ -81,7 +53,7 @@ class _OrderPageState extends State<OrderPage> {
                           widget.products.price,
                           style: GoogleFonts.montserrat(
                             fontSize: 15,
-                            fontWeight: FontWeight.,
+                            fontWeight: FontWeight.bold,
                           ),
                         ), // product's price
 
@@ -102,8 +74,8 @@ class _OrderPageState extends State<OrderPage> {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
