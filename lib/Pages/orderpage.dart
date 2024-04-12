@@ -29,53 +29,67 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            DraggableScrollableSheet(
-              builder: (context, scrollController) => Column(
-                children: [
-                  Text(widget.products.name), // Product's Title/Name
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  Text(widget.products.description), // product's description
-                  const SizedBox(
-                    height: 200,
-                  ),
-                  IntrinsicHeight(
-                    child: Row(
+      body: Stack(
+        children: [
+          Column(
+            children: [
+              Image.asset(widget.products.imagepath),
+              DraggableScrollableSheet(
+                //        maxChildSize: 0.8,
+                initialChildSize: 0.5,
+                //   minChildSize: 0.6,
+                builder: (context, scrollController) => ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    color: Colors.white,
+                    child: Column(
                       children: [
+                        Text(widget.products.name), // Product's Title/Name
                         const SizedBox(
-                          width: 50,
+                          height: 50,
                         ),
-                        Text(
-                          widget.products.price,
-                          style: GoogleFonts.montserrat(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                        Text(widget
+                            .products.description), // product's description
+                        const SizedBox(
+                          height: 200,
+                        ),
+                        IntrinsicHeight(
+                          child: Row(
+                            children: [
+                              const SizedBox(
+                                width: 50,
+                              ),
+                              Text(
+                                widget.products.price,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ), // product's price
+
+                              const Spacer(), // spacer used for spacing the widgets currectly
+                              const VerticalDivider(
+                                color: Colors.black,
+                                thickness: 1,
+                                indent: 5,
+                                endIndent: 0,
+                                width: 20,
+                              ),
+
+                              BigButton(
+                                  onPressed: addToCart), // add to cart button
+                              const SizedBox(width: 10),
+                            ],
                           ),
-                        ), // product's price
-
-                        const Spacer(), // spacer used for spacing the widgets currectly
-                        const VerticalDivider(
-                          color: Colors.black,
-                          thickness: 1,
-                          indent: 5,
-                          endIndent: 0,
-                          width: 20,
                         ),
-
-                        BigButton(onPressed: addToCart), // add to cart button
-                        const SizedBox(width: 10),
                       ],
                     ),
                   ),
-                ],
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+        ],
       ),
     );
   }
