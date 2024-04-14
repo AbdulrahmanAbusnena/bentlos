@@ -30,35 +30,42 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+        fit: StackFit.expand,
         children: [
           Column(
             children: [
-              Image.asset(widget.products.imagepath),
+              Center(
+                child: Image.asset(
+                  widget.products.imagepath,
+                  height: 500,
+                  width: 100,
+                ),
+              ),
               DraggableScrollableSheet(
-                //        maxChildSize: 0.8,
-                initialChildSize: 0.5,
-                //   minChildSize: 0.6,
+                maxChildSize: .8,
+                initialChildSize: .53,
+                minChildSize: .53,
                 builder: (context, scrollController) => ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Container(
-                    color: Colors.white,
+                    color: Colors.black,
                     child: Column(
                       children: [
                         Text(widget.products.name), // Product's Title/Name
-                        const SizedBox(
-                          height: 50,
-                        ),
+                        //   const SizedBox(
+                        //     height: 50,
+                        //   ),
                         Text(widget
                             .products.description), // product's description
-                        const SizedBox(
-                          height: 200,
-                        ),
+                        //   const SizedBox(
+                        //     height: 200,
+                        //  ),
                         IntrinsicHeight(
                           child: Row(
                             children: [
-                              const SizedBox(
-                                width: 50,
-                              ),
+                              //       const SizedBox(
+                              //        width: 50,
+                              //     ),
                               Text(
                                 widget.products.price,
                                 style: GoogleFonts.montserrat(
@@ -78,7 +85,7 @@ class _OrderPageState extends State<OrderPage> {
 
                               BigButton(
                                   onPressed: addToCart), // add to cart button
-                              const SizedBox(width: 10),
+                              //       const SizedBox(width: 10),
                             ],
                           ),
                         ),
