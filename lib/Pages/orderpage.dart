@@ -29,72 +29,36 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 141, 190, 230),
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Column(
-            children: [
-              Center(
-                child: Image.asset(
-                  widget.products.imagepath,
-                  height: 500,
-                  width: 100,
-                ),
-              ),
-              DraggableScrollableSheet(
-                maxChildSize: .8,
-                initialChildSize: .53,
-                minChildSize: .53,
-                builder: (context, scrollController) => ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Container(
-                    color: Colors.black,
-                    child: Column(
-                      children: [
-                        Text(widget.products.name), // Product's Title/Name
-                        //   const SizedBox(
-                        //     height: 50,
-                        //   ),
-                        Text(widget
-                            .products.description), // product's description
-                        //   const SizedBox(
-                        //     height: 200,
-                        //  ),
-                        IntrinsicHeight(
-                          child: Row(
-                            children: [
-                              //       const SizedBox(
-                              //        width: 50,
-                              //     ),
-                              Text(
-                                widget.products.price,
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ), // product's price
-
-                              const Spacer(), // spacer used for spacing the widgets currectly
-                              const VerticalDivider(
-                                color: Colors.black,
-                                thickness: 1,
-                                indent: 5,
-                                endIndent: 0,
-                                width: 20,
-                              ),
-
-                              BigButton(
-                                  onPressed: addToCart), // add to cart button
-                              //       const SizedBox(width: 10),
-                            ],
-                          ),
-                        ),
-                      ],
+          Image.asset(
+            widget.products.imagepath,
+            height: 17,
+          ),
+          DraggableScrollableSheet(
+            maxChildSize: .8,
+            initialChildSize: .53,
+            minChildSize: .53,
+            builder: (context, scrollController) => ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Container(
+                color: Colors.white70,
+                child: Column(
+                  children: [
+                    Text(
+                      widget.products.name,
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),
