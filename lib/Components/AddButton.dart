@@ -1,16 +1,18 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:bentlos/Design/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BigButton extends StatefulWidget {
+class AddButton extends StatefulWidget {
   final void Function()? onPressed;
-  const BigButton({super.key, required this.onPressed});
+  const AddButton({super.key, required this.onPressed});
 
   @override
-  State<BigButton> createState() => BigButtonState();
+  State<AddButton> createState() => BigButtonState();
 }
 
-class BigButtonState extends State<BigButton> {
+class BigButtonState extends State<AddButton> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(

@@ -1,4 +1,5 @@
-import 'package:bentlos/Components/bigbutton.dart';
+// import 'package:bentlos/Components/bigbutton.dart';
+import 'package:bentlos/Components/AddButton.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
 import 'package:bentlos/modules/shop.dart';
@@ -29,7 +30,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 141, 190, 230),
+      backgroundColor: const Color.fromARGB(255, 141, 190, 230),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -54,6 +55,17 @@ class _OrderPageState extends State<OrderPage> {
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                       ),
+                    ),
+                    const Spacer(),
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(widget.products.price),
+                        const Spacer(),
+                        AddButton(onPressed: addToCart)
+                      ],
                     ),
                   ],
                 ),
