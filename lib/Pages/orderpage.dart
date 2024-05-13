@@ -60,11 +60,26 @@ class _OrderPageState extends State<OrderPage> {
                     Row(
                       children: [
                         const SizedBox(
-                          width: 10,
+                          width: 20,
                         ),
-                        Text(widget.products.price),
-                        const Spacer(),
-                        AddButton(onPressed: addToCart)
+                        Text(
+                          widget.products.price,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const Spacer(
+                          flex: 12,
+                        ),
+                        AddButton(onPressed: addToCart),
+                        const SizedBox(
+                          width: 3,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
                       ],
                     ),
                   ],

@@ -25,9 +25,9 @@ class _CardHomeState extends State<CardHome> {
       onTap: widget.onTap,
       // The Card
       child: Card(
-        elevation: 50,
-        //   shadowColor: Colors.grey,
-        color: buttons_card_color,
+        //     elevation: 50,
+        shadowColor: Colors.grey,
+        color: Colors.transparent,
         child: SizedBox(
           height: 80,
           width: 200,

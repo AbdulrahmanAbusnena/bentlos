@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+        backgroundColor: Colors.yellow[400],
         appBar: AppBar(
           title: Text(
             'Home',
@@ -40,11 +40,10 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               fontSize: 24,
               fontWeight: FontWeight.w800,
-            ), 
-            
+            ),
           ),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+          backgroundColor: Colors.yellow[400],
           elevation: 0.0,
         ),
         body: Column(
