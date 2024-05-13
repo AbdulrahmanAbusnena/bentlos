@@ -30,7 +30,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 141, 190, 230),
+      backgroundColor: Colors.yellow[400],
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -45,7 +45,8 @@ class _OrderPageState extends State<OrderPage> {
             builder: (context, scrollController) => ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Container(
-                color: Colors.white70,
+                // TODO: Choose the color for Draggable Scrollable sheet
+                color: Colors.black87,
                 child: Column(
                   children: [
                     Text(

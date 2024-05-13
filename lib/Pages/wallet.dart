@@ -10,6 +10,22 @@ class MyWallet extends StatefulWidget {
 class _MyWalletState extends State<MyWallet> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: const Column());
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Colors.grey,
+            //      boxShadow:  Colors.grey,
+          ),
+          child: const Column(
+            children: [
+              Icon(Icons.wallet, color: Colors.grey),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

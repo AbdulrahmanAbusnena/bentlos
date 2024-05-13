@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bentlos/modules/product.dart';
-import 'package:bentlos/Design/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CardHome extends StatefulWidget {
