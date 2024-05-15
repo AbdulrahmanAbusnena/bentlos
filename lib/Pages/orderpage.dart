@@ -30,7 +30,18 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(220, 228, 207, 111),
+      backgroundColor: const Color.fromARGB(220, 228, 207, 111),
+      appBar: AppBar(
+        title: Text("bentlos",
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            )),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(220, 228, 207, 111),
+        //  elevation: 0,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -46,7 +57,7 @@ class _OrderPageState extends State<OrderPage> {
               borderRadius: BorderRadius.circular(12),
               child: Container(
                 // TODO: Choose the color for Draggable Scrollable sheet
-                color: Colors.white54,
+                color: Colors.white60,
                 child: Column(
                   children: [
                     Text(
