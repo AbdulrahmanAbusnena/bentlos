@@ -30,7 +30,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[400],
+      backgroundColor: Color.fromARGB(220, 228, 207, 111),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -46,7 +46,7 @@ class _OrderPageState extends State<OrderPage> {
               borderRadius: BorderRadius.circular(12),
               child: Container(
                 // TODO: Choose the color for Draggable Scrollable sheet
-                color: Colors.black87,
+                color: Colors.white54,
                 child: Column(
                   children: [
                     Text(
