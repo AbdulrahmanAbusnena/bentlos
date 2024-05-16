@@ -11,7 +11,7 @@ class NavBar extends StatelessWidget {
     return GNav(
       onTabChange: (value) => onTabChange!(value),
       mainAxisAlignment: MainAxisAlignment.center,
-      backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+      backgroundColor: Color.fromRGBO(231, 223, 154, 1),
       activeColor: Colors.white54,
       tabActiveBorder: Border.all(color: Colors.white54),
       //  tabBackgroundColor: Colors.grey.shade500,

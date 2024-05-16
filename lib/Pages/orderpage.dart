@@ -30,7 +30,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(220, 228, 207, 111),
+      backgroundColor: Color.fromRGBO(231, 223, 154, 1),
       appBar: AppBar(
         title: Text("bentlos",
             style: GoogleFonts.montserrat(
@@ -39,7 +39,7 @@ class _OrderPageState extends State<OrderPage> {
               color: Colors.black,
             )),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(220, 228, 207, 111),
+        backgroundColor: Color.fromRGBO(231, 223, 154, 1),
         //  elevation: 0,
       ),
       body: Stack(
@@ -48,6 +48,7 @@ class _OrderPageState extends State<OrderPage> {
           Image.asset(
             widget.products.imagepath,
             height: 17,
+            width: 17,
           ),
           DraggableScrollableSheet(
             maxChildSize: .8,
@@ -56,17 +57,24 @@ class _OrderPageState extends State<OrderPage> {
             builder: (context, scrollController) => ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Container(
-                // TODO: Choose the color for Draggable Scrollable sheet
                 color: Colors.white60,
                 child: Column(
                   children: [
-                    Text(
-                      widget.products.name,
-                      style: GoogleFonts.montserrat(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                      ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.products.name,
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
                     const Spacer(),
                     Row(
@@ -87,7 +95,7 @@ class _OrderPageState extends State<OrderPage> {
                         ),
                         AddButton(onPressed: addToCart),
                         const SizedBox(
-                          width: 3,
+                          height: 5,
                         ),
                         const SizedBox(
                           width: 5,

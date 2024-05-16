@@ -29,7 +29,7 @@ class _ShopPageState extends State<ShopPage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
         builder: (context, value, child) => Scaffold(
-              backgroundColor: Colors.black,
+              backgroundColor: Color.fromRGBO(231, 223, 154, 1),
               appBar: AppBar(
                 title: Text(
                   'Shop',
@@ -39,7 +39,7 @@ class _ShopPageState extends State<ShopPage> {
                     fontWeight: FontWeight.w800,
                   ),
                 ),
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromRGBO(231, 223, 154, 1),
                 elevation: 0.0,
               ),
               body: Column(

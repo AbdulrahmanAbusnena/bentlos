@@ -21,7 +21,7 @@ class CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(builder: (context, value, child) {
       return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+        backgroundColor: Color.fromRGBO(231, 223, 154, 1),
         appBar: AppBar(
           title: Text('Cart',
               style: GoogleFonts.montserrat(
@@ -31,7 +31,7 @@ class CartPageState extends State<CartPage> {
               )),
           centerTitle: true,
           elevation: 0,
-          backgroundColor: const Color.fromARGB(255, 5, 37, 64),
+          backgroundColor: Color.fromRGBO(231, 223, 154, 1),
         ),
         body: Column(
           children: [
@@ -44,7 +44,7 @@ class CartPageState extends State<CartPage> {
                     padding: const EdgeInsets.all(10.0),
                     child: ListTileCart(
                       products: individualProducts,
-                      onTap: () => removeFromCart(individualProducts),
+                      onPressed: () => removeFromCart(individualProducts),
                     ),
                   );
                 }),
