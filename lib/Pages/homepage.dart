@@ -61,11 +61,17 @@ class _HomePageState extends State<HomePage> {
                     );
                   }),
             ),
+            const SizedBox(
+              height: 5,
+            ),
             const Divider(
               color: Colors.black,
               //    thickness: 12,
-              //    indent: 30,
-              //      endIndent: 30,
+              indent: 75,
+              endIndent: 75,
+            ),
+            const SizedBox(
+              height: 5,
             ),
             Expanded(
               child: ListView.builder(

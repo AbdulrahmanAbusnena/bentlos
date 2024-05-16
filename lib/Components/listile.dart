@@ -14,11 +14,8 @@ class Listile extends StatelessWidget {
       ),
       child: ListTile(
         title: Text(products.name),
-        leading: CircleAvatar(
-          child: Image.asset(
-            products.imagepath,
-            height: 40,
-          ),
+        leading: Image.asset(
+          products.imagepath,
         ),
         trailing: IconButton(
             onPressed: onPressed,

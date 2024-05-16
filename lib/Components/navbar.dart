@@ -12,12 +12,15 @@ class NavBar extends StatelessWidget {
       onTabChange: (value) => onTabChange!(value),
       mainAxisAlignment: MainAxisAlignment.center,
       backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
-      activeColor: Colors.white54,
-      tabActiveBorder: Border.all(color: Colors.white54),
+      activeColor: const Color.fromARGB(173, 119, 114, 114),
+      tabActiveBorder: Border.all(
+        color: const Color.fromARGB(173, 119, 114, 114),
+      ),
       //  tabBackgroundColor: Colors.grey.shade500,
-      color: const Color.fromRGBO(255, 255, 255, 0.541),
+      color: Colors.white54,
       padding: const EdgeInsets.all(16.0),
       gap: 20,
+
       iconSize: 25,
       tabs: const [
         GButton(icon: Icons.home_rounded, text: 'Home'),

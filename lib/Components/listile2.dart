@@ -11,7 +11,7 @@ class ListTileCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 11, 54, 90),
+        color: Colors.white60,
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
