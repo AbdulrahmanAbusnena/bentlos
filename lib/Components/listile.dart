@@ -22,7 +22,7 @@ class Listile extends StatelessWidget {
         ),
         trailing: IconButton(
             onPressed: onPressed,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_forward_ios,
             )),
       ),

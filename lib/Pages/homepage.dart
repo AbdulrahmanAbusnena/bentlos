@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(
       builder: (context, value, child) => Scaffold(
-        backgroundColor: Color.fromRGBO(231, 223, 154, 1),
+        backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
         drawer: const Drawer(),
         appBar: AppBar(
           title: Text(
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Color.fromRGBO(231, 223, 154, 1),
+          backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
           elevation: 0.0,
         ),
         body: Column(
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                     );
                   }),
             ),
-            Divider(
+            const Divider(
               color: Colors.black,
               //    thickness: 12,
               //    indent: 30,
