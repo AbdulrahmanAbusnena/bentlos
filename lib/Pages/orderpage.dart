@@ -30,7 +30,8 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
+      backgroundColor: const Color.fromRGBO(231, 223, 154, 1), 
+      // AppBar
       appBar: AppBar(
         title: Text("bentlos",
             style: GoogleFonts.montserrat(
