@@ -21,8 +21,9 @@ class CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Consumer<EApp>(builder: (context, value, child) {
       return Scaffold(
-        backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
-        appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(231, 223, 154, 1), 
+        // AppBar 
+        appBar: AppBar( 
           title: Text('Cart',
               style: GoogleFonts.montserrat(
                 fontSize: 18,
@@ -32,10 +33,11 @@ class CartPageState extends State<CartPage> {
           centerTitle: true,
           elevation: 0,
           backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
-        ),
+        ), 
         body: Column(
-          children: [
-            Expanded(
+          children: [ 
+            Expanded( 
+         //     The list view
               child: ListView.builder(
                 itemCount: value.cart.length,
                 itemBuilder: ((context, index) {
