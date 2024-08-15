@@ -28,7 +28,8 @@ class _OrderPageState extends State<OrderPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+    // Scaffp;d
     return Scaffold(
       backgroundColor: const Color.fromRGBO(231, 223, 154, 1), 
       // AppBar
@@ -42,7 +43,8 @@ class _OrderPageState extends State<OrderPage> {
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(231, 223, 154, 1),
         //  elevation: 0,
-      ),
+      ), 
+      // Stack
       body: Stack(
         fit: StackFit.expand,
         children: [
