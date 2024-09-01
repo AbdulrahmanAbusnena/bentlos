@@ -11,7 +11,7 @@ class EApp extends ChangeNotifier {
         Status: Available,  
         122 Available 
         ''',
-        imagepath: 'assets/jacket.png',
+        imagepath: 'assets/jacket.png',   
         price: '£24.5'),
     Products(
         name: 'LVs Bag',
